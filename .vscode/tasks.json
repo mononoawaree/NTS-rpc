@@ -1,0 +1,24 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build MyApp",
+      "type": "shell",
+      "command": "clang++",
+      "args": [
+        "-std=c++17",
+        "-I${workspaceFolder}/discord-files",
+        "${workspaceFolder}/src/main.cpp",
+        "${workspaceFolder}/discord-files/*.cpp",
+        "${workspaceFolder}/Binaries/Mac/discord_game_sdk.dylib",
+        "-o",
+        "${workspaceFolder}/Binaries/Mac/MyApp"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
